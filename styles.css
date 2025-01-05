@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* --------------------(Reset)------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  /* Colors */
+
+  /* Primary */
+
+  --Red: hsl(0, 100%, 74%);
+  --Green: hsl(154, 59%, 51%);
+
+  /* Accent */
+
+  --Blue: hsl(248, 32%, 49%);
+
+  /* Neutral */
+
+  --Dark-Blue: hsl(249, 10%, 26%);
+  --Grayish-Blue: hsl(246, 25%, 77%);
+
+  --Blue-footer: hsl(228, 45%, 44%);
+  --White: hsl(0, 0%, 100%);
+}
+
+/* --------------------(Body)------------------------*/
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: var(--Red);
+  background-image: url(./images/bg-intro-mobile.png);
+  color: var(--white);
+  font-size: 16px;
+}
+
+/* --------------------(Container)------------------------*/
+body {
+  font-family: "Poppins", sans-serif;
+  color: var(--White);
+  background-color: var(--Red);
+  background-image: url(./images/bg-intro-mobile.png);
+}
+.main-container {
+  margin: 96px auto 40px;
+  width: 330px;
+}
+h1 {
+  width: 235px;
+  margin: -10px auto 16px;
+  font-size: 1.7em;
+  line-height: 38px;
+}
+.description {
+  text-align: center;
+  margin: 0 10px 68px;
+}
+
+.offer {
+  background-color: var(--Blue);
+  width: 330px;
+  height: 90px;
+  border-radius: 10px;
+  padding: 22px 75px;
+  text-align: center;
+  margin-bottom: 20px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+  & span {
+    font-weight: 700;
+  }
+}
+
+/* --------------------(Form)------------------------*/
+.form-container {
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 24px;
+  box-shadow: 0 8px 0 rgba(0, 0, 0, 0.1);
+
+  & input[placeholder] {
+    width: 100%;
+    height: 45px;
+    border-radius: 5px;
+    border: 1px solid var(--Grayish-Blue);
+    padding: 0 15px;
+    margin-bottom: 18px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 700;
+    outline: none;
+    font-size: 1em;
+  }
+
+  & input[type="submit"] {
+    background-color: var(--Green);
+    color: var(--White);
+    border: none;
+    width: 100%;
+    height: 55px;
+    border-radius: 5px;
+    font-family: "Poppins", sans-serif;
+    font-size: 1em;
+    /* padding-top: 10px;
+    padding-bottom: 5px; */
+    text-transform: uppercase;
+    box-shadow: 0 4px 0 rgba(22, 160, 133);
+  }
+
+  & input[type="submit"]:hover {
+    background-color: hsl(154, 59%, 51%, 0.8);
+    cursor: pointer;
+  }
+}
+
+.main-container input:focus {
+  border-color: var(--Blue);
+}
+
+.error-container {
+  position: relative;
+}
+
+.icon-error {
+  position: absolute;
+  right: 15px;
+  top: -37px;
+}
+
+.error-message {
+  color: var(--Red);
+  font-style: italic;
+  text-align: right;
+  font-size: 0.75em;
+  margin: -16px 4px 18px;
+}
+
+.terms {
+  margin-top: 20px;
+  font-size: 0.8em;
+  color: var(--Grayish-Blue);
+  text-align: center;
+  & a {
+    color: var(--Red);
+    font-weight: 700;
+    text-decoration: none;
+  }
+}
+
+/* --------------------(Footer)------------------------*/
+.attribution {
+  font-size: 0.89em;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.attribution a {
+  color: var(--Blue-footer);
+  text-decoration: none;
+}
+
+/* --------------------(Screen > 1124px)------------------------*/
+@media only screen and (min-width: 1124px) {
+  body {
+    background-image: url(./images/bg-intro-desktop.png);
+    background-position: center;
+    background-size: cover;
+  }
+
+  .main-container {
+    width: 1120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 96px auto 40px;
+  }
+
+  h1 {
+    font-size: 3.5em;
+    width: 500px;
+    line-height: 55px;
+    /* margin-top: -100px;
+    margin-left: 0; */
+    margin: -100px 0 30px;
+  }
+
+  .description {
+    text-align: left;
+    margin-left: 0;
+    margin-top: 30px;
+  }
+
+  p {
+    font-size: 1.1em;
+    line-height: 30px;
+  }
+
+  section:nth-child(1) {
+    padding-top: 200px;
+    width: 570px;
+  }
+
+  section:nth-child(2) {
+    width: 500px;
+  }
+  .offer {
+    width: 550px;
+    height: 60px;
+    padding: 20px 0;
+  }
+
+  .form-container {
+    width: 550px;
+    /* height: 485px; */
+    padding: 40px;
+
+    & input[placeholder] {
+      height: 60px;
+      border-radius: 5px;
+      border: 1px solid var(--Grayish-Blue);
+      padding: 0 30px;
+      margin-bottom: 18px;
+    }
+
+    /* & input[type="submit"] {
+
+      width: 100%;
+      height: 55px;
+      border-radius: 5px;
+
+
+    } */
+  }
+  .icon-error {
+    top: -45px;
+  }
+}
